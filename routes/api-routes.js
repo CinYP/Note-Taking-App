@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs'); 
 // Helper method for generating unique ids
 const uuid = require('../helpers/uuid');
+const db = require('../db/db.json')
 
 module.exports = (app) => {
     //get request 
@@ -11,7 +12,7 @@ module.exports = (app) => {
 
     //post review request
     app.post('/api/notes', (req,res)=>{
-        let db = fs.readFileSync('./db/db.json');
+        let db = fs.readFileSync('../db/db.json');
         db = json.parse(db);
         res.json(db); 
 
@@ -24,21 +25,18 @@ module.exports = (app) => {
         }
 
         db.push(createdNote);
-        fs.writeFileSync('./db/db.json',JSON.stringify(db));
+        fs.writeFileSync('../db/db.json',JSON.stringify(db));
         res.json(db);
-
-        //can I use this without an if, else statement? 
-       // res.status(201).send('Note has been posted successfully');
     });
 
     //delete request
     app.delete('./api/notes:id', (req, res)=>{
         //reading note from database 
-        let db = JSON.parse(fs.readFileSync('./db/db.json'))
+        let db = JSON.parse(fs.readFileSync('../db/db.json'))
 
         let deleteNote = db.filter(item => item.id !== req.params.id);
 
-        fs.writeFileSync('./db/db.json', JSON.stringify(deleteNote));
+        fs.writeFileSync('../db/db.json', JSON.stringify(deleteNote));
         res.json(deleteNote);
     })
 };
