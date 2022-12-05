@@ -3,7 +3,7 @@ const express = require('express');
 // app use express
 const app = express();
 //creating port 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 
 //using static assets through express middleweare 
 app.use(express.static('public'));
@@ -21,7 +21,7 @@ app.listen(PORT, ()=>{
     =============================================
    
     Server available at localhost${PORT}
-    
+
     =============================================`);
 
 });
