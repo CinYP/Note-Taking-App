@@ -1,31 +1,39 @@
 # Note-Taking-App
 
+# Deployed Application on Heroku 
+https://note-taking-apps.herokuapp.com/
 
-### Acceptance Criteria 
-__________________________
+# Deployed Application Repository 
+https://github.com/CinYP/Note-Taking-App 
 
-# User Story
+## Title 
 
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
+Note Taker Generator
 
-## Acceptance Criteria
+## User Story
 
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
+As a user, I want to take notes and store them at my convinence, save, and delete notes on one application. 
+
+  ## Instructions 
+
+    Begin the application by pressing the start button on the home page. When on the note taking interface, write a note containing a title and text, select the + button to save, and later press the trash button to delete. 
+
+  # Learnings 
+
+    A few of the skills learned in the creation of this project were Node, Express, FS module, routing pages, middleware, and additional Express content. 
+
+  ## Installation
+
+    No installation required. 
+
+  ## License
+
+     N/A
+
+  ## Collaborators
+    Collaborators include: Cinthia Pruitt, Georgia Institute of Technology Staff (TA and Instructor), Google.com, CodeAcademmy, and various articles which helped in the understanding of Node,js.
+
+  ## For More information 
+  Please contact CinYP or email cinthiapruitt@gmail.com.
+
+  

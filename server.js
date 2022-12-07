@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //routes to route files
 require('./routes/api-routes')(app);
-require('./routes/html-Routes')(app);
+require('./routes/html-routes')(app);
 
 //app listener which starts with the server
 app.listen(PORT, ()=>{

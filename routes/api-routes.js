@@ -2,9 +2,11 @@ const path = require('path');
 const fs = require('fs'); 
 // Helper method for generating unique ids
 const uuid = require('../helpers/uuid');
-const db = require('../db/db.json')
 
 module.exports = (app) => {
+    //destructing assignment for the items in req.body
+    //const {title && text} = req.body; 
+
     //get request 
     app.get('/api/notes', (req,res)=>{
         res.sendFile(path.join(__dirname,'../db/db.json'));
@@ -12,9 +14,9 @@ module.exports = (app) => {
 
     //post review request
     app.post('/api/notes', (req,res)=>{
-        let db = fs.readFileSync('../db/db.json');
-        db = json.parse(db);
-        res.json(db); 
+        let db = fs.readFileSync(path.join(__dirname,'../db/db.json'));
+        db = JSON.parse(db);
+
 
         //body of the note 
         let createdNote = {
@@ -25,7 +27,7 @@ module.exports = (app) => {
         }
 
         db.push(createdNote);
-        fs.writeFileSync('../db/db.json',JSON.stringify(db));
+        fs.writeFileSync(path.join(__dirname,'../db/db.json'),JSON.stringify(db));
         res.json(db);
     });
 
