@@ -32,7 +32,7 @@ module.exports = (app) => {
     });
 
     //delete request
-    app.delete('./api/notes:id', (req, res)=>{
+    app.delete('/api/notes:id', (req, res)=>{
         //reading note from database 
         let db = JSON.parse(fs.readFileSync('../db/db.json'))
 
